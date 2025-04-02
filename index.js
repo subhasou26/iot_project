@@ -38,7 +38,7 @@ app.get("/gpsdata", async (req, res) => {
     const newGPS = new GPSData({ latitude: lat, longitude: lng });
     await newGPS.save();
 
-    res.status(201).json({ message: "GPS Data Stored", data: newGPS });
+    res.status(200).json("ok");
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
